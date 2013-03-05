@@ -1,0 +1,7 @@
+[2chainz]
+handle=2chaind
+oauth=.2chainz_oauth
+consumer_key=hobx5tFXk1Qazzn4T7Atag
+consumer_secret=rEtOrRRaFlfQqb1gnp7jqj62ifeh4YxcUWOlSE3KhkU
+corpus=lyrics.txt
+tweet_method=markov
