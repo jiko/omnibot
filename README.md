@@ -16,4 +16,20 @@ To use this code you will need to change the path in the cron definition, as wel
 
 Your corpus file can be named anything, as long as you specify it in omni.cfg. A sample configuration file (omni.cfg.sample) is included in this repository.
 
-The init_cred.py script makes storing Twitter OAuth credentials easy. See the TODO.md file to see future plans, which include a detailed walkthrough of creating a configuration file.
+The init_cred.py script makes storing Twitter OAuth credentials easy. 
+
+todo
+====
+- Expand on the init_cred.py script to automate the creation of a config file
+	- Create a Twitter account for your bot
+	- What is the Twitter username of your bot?
+	- Create an app for this username at dev.twitter.com/apps/new
+	- What is your Consumer Key?
+	- What is your Consumer Secret?
+	- What is your OAuth Access Token?
+	- What is your OAuth Access Token Secret?
+	- OK, now for the content of bot
+	- What is the name of the corpus file for your bot? 
+	- What method should we use to parse the corpus? (markov, isopsephy, random line)
+- Write a setup.py script that checks for deps and tries to install via pip
+	- Depends on twitter, configparser
