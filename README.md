@@ -30,6 +30,6 @@ todo
 	- What is your OAuth Access Token Secret?
 	- OK, now for the content of bot
 	- What is the name of the corpus file for your bot? 
-	- What method should we use to parse the corpus? (markov, isopsephy, random line)
+	- What method should we use to generate text from the corpus? (markov, isopsephy, random line)
 - Write a setup.py script that checks for deps and tries to install via pip
 	- Depends on twitter, configparser
