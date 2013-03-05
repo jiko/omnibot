@@ -9,7 +9,7 @@ TODO
 	- What is your OAuth Access Token?
 	- What is your OAuth Access Token Secret?
 	- OK, now for the content of bot
-	- What is the name of the corpus file for your bot? Place it in the same directory as this script.
+	- What is the name of the corpus file for your bot? 
 	- What method should we use to parse the corpus? (markov, isopsephy, random line)
 - Write README.md
 - Write a setup.py script that checks for deps and tries to install via pip
