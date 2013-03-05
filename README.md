@@ -9,7 +9,7 @@ To manage a growing menagerie of bots, I consolidated my code, based on [shrinkb
 	crontab -e
 	0 */4 * * * python /home/jk/Code/bots/omnibot/omni.py
 
-To use this code you will need to change the path in the cron definition, as well as in omni.py, to match the location of omnibot and your bot folders. Each bot folder contains:
+To use this code you will need to change the path in the cron definition, as well as in omni.py, to match the location of omnibot and your bot folders, respectively. Store the list of bot folders in bots.list. Each bot folder contains:
 
 	omni.cfg
 	corpus.txt
