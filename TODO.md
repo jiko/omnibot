@@ -11,6 +11,5 @@ TODO
 	- OK, now for the content of bot
 	- What is the name of the corpus file for your bot? 
 	- What method should we use to parse the corpus? (markov, isopsephy, random line)
-- Write README.md
 - Write a setup.py script that checks for deps and tries to install via pip
 	- Depends on twitter, configparser
