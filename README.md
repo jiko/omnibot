@@ -4,7 +4,7 @@ omnibot
 
 Python scripts and classes to make Twitter bot creation easier.
 
-To manage a growing menagerie of bots, I consolidated my code into classes in a single location. Then I wrote a simple script to update every bot at once, hence the name. The bot runs via cron, like this:
+To manage a growing menagerie of bots, I consolidated my code, based on [shrinkbot](https://github.com/jiko/the_shrinkbot), into a class and put all bot-related classes in a single location. Then I wrote a simple script to update every bot at once, hence the name. The bot runs via cron, like this:
 
 	crontab -e
 	0 */4 * * * python /home/jk/Code/bots/omnibot/omni.py
