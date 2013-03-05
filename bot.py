@@ -3,7 +3,7 @@ from twitter import Twitter, TwitterError
 from twitter.oauth import OAuth, read_token_file
 from twitter.oauth_dance import oauth_dance
 import markovgen, isopsephy
-from random import randint
+from random import randint, choice
 
 class Bot:
 	def __init__(self, bot, path):
@@ -26,15 +26,19 @@ class Bot:
 			domain='api.twitter.com')
 	
 	def generate_text(self):
-		if self.method == "markov":
-			with open(self.corpus) as text:
-				markov = markovgen.Markov(text)
-			word_count = randint(6,18)
-			return markov.generate_markov_text(size=word_count)
-		elif self.method == "isopsephy":
-			with open(self.corpus) as f:
+		text = ""
+		with open(self.corpus) as f:
+			if self.method == "markov":
+				markov = markovgen.Markov(f)
+				word_count = randint(6,18)
+				text = markov.generate_markov_text(size=word_count)
+			elif self.method == "isopsephy":
 				iso = isopsephy.Isopsephia(f.read())
-			return iso.generate_text()
+				text = iso.generate_text()
+			else:
+				lines = [line.strip() for line in f]
+				text = choice(lines)[:123]
+		return text
 
 	def tweet(self,irtsi=None,at=None): 
 		status = self.generate_text()
