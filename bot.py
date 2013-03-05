@@ -57,7 +57,7 @@ class Bot:
 		status_id = str(mention['id'])
 		if self.last_id_replied < status_id:
 			self.last_id_replied = status_id
-		tweet(status_id,asker)
+		self.tweet(status_id,asker)
 
 	def replies(self):
 		# get the status_id of the last tweet to which you replied
