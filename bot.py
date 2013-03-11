@@ -79,7 +79,7 @@ class Bot:
         try:
             self.last_id_replied = replies[0]
         except IndexError:
-            self.last_id_replied = 0
+            self.last_id_replied = None
         results = []
         results = self.twitter.search(
             q="@"+self.handle,
