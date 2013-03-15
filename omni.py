@@ -11,5 +11,5 @@ with open(bot_dir_list) as f:
     bot_folders = f.read().splitlines()
 for bot_folder in bot_folders:
     tweeter = Bot(bot_folder, bots_root)
-    tweeter.replies()
+#    tweeter.replies()
     tweeter.tweet()
