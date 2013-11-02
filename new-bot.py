@@ -5,6 +5,8 @@ import os
 print "Create a new Twitter account: https://twitter.com/signup"
 print "What is the Twitter username for your bot?"
 BOT_NAME = raw_input()
+with open('bots.list', 'a') as bot_list:
+    bot_list.write(BOT_NAME)
 FULL_PATH = os.path.dirname(__file__) + os.sep + BOT_NAME
 os.mkdir(FULL_PATH)
 CFG_FILE = FULL_PATH + "/omni.cfg"
