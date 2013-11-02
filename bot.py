@@ -10,16 +10,19 @@ from random import randint, choice
 
 
 class Bot:
-    def __init__(self, bot, path):
+    def __init__(self, bot):
         config = ConfigParser.RawConfigParser()
-        config.read(path+bot+"/omni.cfg")
-        oauth = config.get(bot, 'oauth')
+        config.read(os.path.dirname(__file__) + bot + "/omni.cfg")
+
         consumer_key = config.get(bot, 'consumer_key')
         consumer_secret = config.get(bot, 'consumer_secret')
-        oauth_filename = os.environ.get('HOME', '') + os.sep + oauth
+
+        oauth = config.get(bot, 'oauth')
+        oauth_filename = os.path.dirname(__file__) + bot + os.sep + oauth
         oauth_token, oauth_token_secret = read_token_file(oauth_filename)
+
         self.handle = config.get(bot, 'handle')
-        self.corpus = path + bot + os.sep + config.get(bot, 'corpus')
+        self.corpus = os.path.dirname(__file__) + bot + os.sep + config.get(bot, 'corpus')
         self.method = config.get(bot, 'tweet_method')
         self.twitter = Twitter(domain='search.twitter.com')
         self.twitter.uriparts = ()
@@ -31,7 +34,7 @@ class Bot:
                 consumer_secret
             ),
             secure=True,
-            api_version='1',
+            api_version='1.1',
             domain='api.twitter.com')
 
     def generate_text(self):
