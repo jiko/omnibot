@@ -1,7 +1,7 @@
 omnibot
 =======
 
-Python scripts and classes to simplify Twitter bot creation and management.
+Python scripts and classes to simplify Twitter bot creation and management. Used to run [these bots](https://twitter.com/jmkp/lists/bots).
 
 To create a new bot, run the `new-bot.py` script.
 
