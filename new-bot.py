@@ -6,14 +6,13 @@ print "Create a new Twitter account: https://twitter.com/signup"
 print "What is the Twitter username for your bot?"
 BOT_NAME = raw_input()
 with open('bots.list', 'a') as bot_list:
-    bot_list.write(BOT_NAME)
-FULL_PATH = os.path.dirname(__file__) + os.sep + BOT_NAME
-os.mkdir(FULL_PATH)
-CFG_FILE = FULL_PATH + "/omni.cfg"
+    bot_list.write(BOT_NAME + "\n")
+os.mkdir(BOT_NAME)
+CFG_FILE = BOT_NAME + os.sep + "omni.cfg"
 CFG = "[" + BOT_NAME + "]\n"
 CFG += "handle=" + BOT_NAME + "\n"
 print "Create an app for this username at https://dev.twitter.com/apps/new"
-OAUTH_FILE = os.path.dirname(__file__) + os.sep  + BOT_NAME + "_oauth"
+OAUTH_FILE = BOT_NAME + "_oauth"
 CFG += "oauth=" + OAUTH_FILE + "\n"
 print "What is your Consumer Key?"
 CONSUMER_KEY = raw_input()
