@@ -35,7 +35,7 @@ class Isopsephia:
         return mapping
 
     def generate_text(self):
-        pie = str(getrandbits(9))
+        pie = str(getrandbits(127))
         pie = pie.replace("0", "")
         sentence = ''
         for n in pie:
